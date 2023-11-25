@@ -17,7 +17,7 @@ body {
 }
 
 #root {
-  padding: 100px 100px;
+  padding: 80px 100px;
   display: flex;
   grid-column-start: 1fr 1fr;
   height: 100vh;
@@ -33,6 +33,7 @@ h1 {
 
 p {
   font-size: 15px;
+  font-family: inherit;
 }
 
 code {
@@ -65,11 +66,19 @@ code {
 .input-field {
   padding: 15px;
   width: 100%;
+  height: 45px;
   /* margin-bottom: 10px; */
   border-radius: 10px;
   border-style: solid;
   border-color: rgb(219, 218, 218);
   font-family: inherit;
+}
+
+.input-field-invalid {
+  border-color: red;
+  background-image: url(../public/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: 98% 50%;
 }
 
 #column-right-header {
@@ -84,6 +93,7 @@ code {
 #column-right-content {
   background-color: white;
   padding: 30px;
+  padding-top: 40px;
   border-radius: 10px;
   height: 100%;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
@@ -105,7 +115,7 @@ code {
 
 .btn-try {
   background-color: hsl(247, 34%, 53%);
-  height: 60px;
+  height: 50px;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
   margin-bottom: 10px;
 }
@@ -116,14 +126,17 @@ code {
 }
 
 .btn-claim-trial {
-  margin-top: 10px;
+  margin-top: 5px;
   background-color: hsl(154, 59%, 51%);
   border-radius: 5px;
-  height: 60px;
+  height: 50px;
 }
 
-input:invalid {
-  border-color: red;
+.terms-and-conditions {
+  margin-top: 12px;
+  text-align: center;
+  color: grey;
+  font-size: 10px;
 }
 
 .hidden {
@@ -134,4 +147,37 @@ input:invalid {
   text-align: right;
   width: 100%;
   height: 20px;
+  color: red;
+}
+
+.error-msg {
+  font-size: 10px;
+}
+
+a {
+  color: rgb(240, 156, 0);
+}
+
+@media (max-width: 375px) {
+  #root {
+    flex-direction: column;
+    padding: 30px 30px;
+  }
+
+  h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  .btn-try {
+    height: 70px;
+  }
+
+  #column-right-content {
+    padding: 20px;
+  }
 }
