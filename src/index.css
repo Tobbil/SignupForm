@@ -120,16 +120,17 @@ code {
   margin-bottom: 10px;
 }
 
-.btn-try:hover,
-.btn-claim-trial:hover {
-  cursor: pointer;
-}
-
 .btn-claim-trial {
   margin-top: 5px;
   background-color: hsl(154, 59%, 51%);
   border-radius: 5px;
   height: 50px;
+  letter-spacing: 2px;
+}
+
+.btn-try:hover,
+.btn-claim-trial:hover {
+  cursor: pointer;
 }
 
 .terms-and-conditions {
@@ -162,6 +163,7 @@ a {
   #root {
     flex-direction: column;
     padding: 30px 30px;
+    height: 100%;
   }
 
   h1 {
@@ -171,6 +173,7 @@ a {
 
   p {
     font-size: 12px;
+    text-align: center;
   }
 
   .btn-try {
